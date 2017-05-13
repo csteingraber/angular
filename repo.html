@@ -1,0 +1,9 @@
+<h1>{{ repo.name }}</h1>
+<p>Issues: {{ repo.open_issues_count }}</p>
+<ul>
+  <li ng-repeat="contributor in contributors">
+    <img ng-src="{{ contributor.avatar_url }}" title="{{ contributor.login }}">
+    {{ contributor.login }}
+  </li>  
+</ul>
+<a ng-href="#/user/{{ username }}">Back to repos</a>
